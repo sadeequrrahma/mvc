@@ -1,0 +1,96 @@
+﻿@model IEnumerable<mvc.Models.invoice>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.invoiceno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Areaid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.batchno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.discount1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.discount2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.addtax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.invoiceno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customername)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Areaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.batchno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.discount1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.discount2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.addtax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.invoiceno  }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.invoiceno }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.invoiceno })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

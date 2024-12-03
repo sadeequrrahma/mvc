@@ -1,0 +1,99 @@
+﻿@model mvc.Models.invoice
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>invoice</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="invoiceno" class="control-label"></label>
+                <input asp-for="invoiceno" class="form-control" />
+                <span asp-validation-for="invoiceno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="date" class="control-label"></label>
+                <input asp-for="date" class="form-control" />
+                <span asp-validation-for="date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="customername" class="control-label"></label>
+                <input asp-for="customername" class="form-control" />
+                <span asp-validation-for="customername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Areaid" class="control-label"></label>
+                <input asp-for="Areaid" class="form-control" />
+                <span asp-validation-for="Areaid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="description" class="control-label"></label>
+                <input asp-for="description" class="form-control" />
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="batchno" class="control-label"></label>
+                <input asp-for="batchno" class="form-control" />
+                <span asp-validation-for="batchno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantity" class="control-label"></label>
+                <input asp-for="quantity" class="form-control" />
+                <span asp-validation-for="quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="price" class="control-label"></label>
+                <input asp-for="price" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="discount1" class="control-label"></label>
+                <input asp-for="discount1" class="form-control" />
+                <span asp-validation-for="discount1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="discount2" class="control-label"></label>
+                <input asp-for="discount2" class="form-control" />
+                <span asp-validation-for="discount2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="addtax" class="control-label"></label>
+                <input asp-for="addtax" class="form-control" />
+                <span asp-validation-for="addtax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="expirydate" class="control-label"></label>
+                <input asp-for="expirydate" class="form-control" />
+                <span asp-validation-for="expirydate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="address" class="control-label"></label>
+                <input asp-for="address" class="form-control" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mdelete" class="control-label"></label>
+                <input asp-for="mdelete" class="form-control" />
+                <span asp-validation-for="mdelete" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

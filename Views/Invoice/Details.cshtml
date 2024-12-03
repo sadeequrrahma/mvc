@@ -1,0 +1,103 @@
+﻿@model mvc.Models.invoice
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>invoice</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.invoiceno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.invoiceno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.customername)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.customername)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Areaid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Areaid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.batchno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.batchno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.discount1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.discount1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.discount2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.discount2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.addtax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.addtax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.expirydate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.expirydate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.address)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.mdelete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.mdelete)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.invoiceno }) |
+    <a asp-action="Index">Back to List</a>
+</div>
